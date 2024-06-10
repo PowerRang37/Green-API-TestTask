@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Green-API Methods</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+        }
+        .container {
+            display: flex;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            width: 700px;
+        }
+        .left-panel, .right-panel {
+            padding: 10px;
+        }
+        .left-panel {
+            display: flex;
+            flex-direction: column;
+            width: 300px;
+        }
+        .right-panel {
+            margin-left: 20px;
+            flex-grow: 1;
+        }
+        input, button {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            cursor: pointer;
+            border: none;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        pre {
+            background-color: #f2f2f2;
+            border: 1px solid #ccc;
+            padding: 10px;
+            border-radius: 5px;
+            height: 400px;
+            overflow: auto;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="left-panel">
+        <input type="text" id="idInstance" placeholder="idInstance">
+        <input type="text" id="apiTokenInstance" placeholder="apiTokenInstance">
+        <button onclick="getSettings()">getSettings</button>
+        <button onclick="getStateInstance()">getStateInstance</button>
+        <input type="text" id="receiverPhoneNumber" placeholder="Phone Number" value="">
+        <input type="text" id="message" placeholder="Message" value="Hello World!">
+        <button onclick="sendMessage()">sendMessage</button>
+        <input type="text" id="filePhoneNumber" placeholder="Phone Number" value="">
+        <input type="text" id="fileUrl" placeholder="File URL" value="https://images.rawpixel.com/image_png_800/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvZnJob3JzZV9nYWxsb3BfY2FudGVyX21hcmUtaW1hZ2Utcm01MDMtbDBqOXJmcmgucG5n.png">
+        <button onclick="sendFileByUrl()">sendFileByUrl</button>
+    </div>
+    <div class="right-panel">
+        <pre id="output"></pre>
+    </div>
+</div>
+
+<script src="index.js"></script>
+
+</body>
+</html>
